@@ -1,0 +1,446 @@
+
+:root{
+    --primary:#537A95;
+    --secondary:#2f66d4;
+    --hover: #a2d9f5;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --light-bg:#eee;
+    --border:.2rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--primary);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 5rem 7%;
+}
+
+.heading{
+    font-size: 4rem;
+    font-family: sans-serif;
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    background: var(--primary);
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.btn:hover{
+    background: var(--secondary);
+}
+
+a {
+    text-decoration: none;
+}
+
+.success,
+.error,
+.status {
+    display: none;
+}
+
+/* header */
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.title_div {
+    display: flex;
+    align-items: center; /* Optional: Center vertically within the container */
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .log{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--primary);
+    padding-left: 0.5rem;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: var(--primary);
+}
+
+.header .btn{
+    margin-top: 0;
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    margin-left: 1.7rem;
+    display: none;
+}
+
+#menu-btn:hover{
+    color: var(--primary);
+}
+
+.alert {
+    max-width: 50rem;
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+/* header end */
+
+/* home */
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/inn.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+    padding-left: 6rem;
+    padding-top: 10rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: var(--black);
+    line-height: 1.2;
+}
+
+.home .content p{
+    line-height: 2;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+/* home end */
+
+
+
+
+.register{
+    padding: 22rem;
+    background: url(../images/regg.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.register form{
+    padding: 2rem;
+    background: var(--white);
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+
+.register form span{
+    font-size: 1.7rem;
+    color: var(--primary);
+}
+
+.register form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.register form .inputBox input{
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: var(--light-bg);
+    border-radius: .5rem;
+    width: 49%;
+}
+
+.register form .box{
+    margin: 1rem 0;
+    width: 100%;
+    background: var(--light-bg);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+
+
+/* contact ends */
+.examine{
+    
+    padding: 22rem;
+    background: url(../images/last.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.examine form{
+    padding: 2rem;
+    background: var(--white);
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.examine form span{
+    font-size: 1.7rem;
+    color: var(--primary);
+}
+
+.examine form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.examine form .inputBox input {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: .5rem;
+    width: 49%;
+}
+
+.examine form .box{
+    margin: 1rem 0;
+    width: 100%;
+    border-bottom: 0.5px solid var(--primary);
+    border-radius: .5rem;
+    padding: 0.8rem;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+.visits {
+    padding: 22rem;
+    background: url(../images/prof.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.visits .visits-table,
+.profile #pet-visits-table {
+    font-size: 1.4rem;
+}
+
+.profile{
+    padding: 22rem;
+    background: url(../images/prof.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile form{
+    padding: 2rem;
+    background: var(--white);
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+
+.profile form label{
+    font-size: 1.7rem;
+    color: var(--primary);
+}
+
+.profile form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile form .inputBox input{
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: var(--light-bg);
+    border-radius: .5rem;
+    width: 49%;
+}
+
+.profile form .box{
+    margin: 1rem 0;
+    width: 100%;
+    background: var(--light-bg);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+.profile .pet-visits {
+    padding-top: 5rem;
+    width: 70%;
+    margin: auto;
+}
+
+.profile .pet-visits h3 {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+/* contact ends */
+
+textarea {
+    font-size: 1.3rem;
+    resize: none;
+    margin-top: 2%;
+    padding: 1rem;
+    width: 100%;
+    height: 90px;
+    background-color: var(--white);
+    border: 0.5px solid gray;
+}
+
+
+
+/* footer ends */
+
+/* media queries */
+
+@media (max-width: 991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header .btn{
+        display: none;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background: var(--white);
+        border-top: var(--border);
+        padding: 1rem 0;
+        text-align: center;
+        flex-flow: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+    .home .content{
+        max-width: 50rem;
+        padding-left: 3rem;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+    }
+
+}
+
+@media(max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .home .content h3{
+        font-size: 3rem;
+    }
+
+}

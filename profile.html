@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Profile - Vet system</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="title_div">
+            <img src="./images/lo.jpeg" href="#" class="logo">
+            <h3 class="log">Vet System</h3>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register a pet</a>
+            <a href="examine.html">Add a visit</a>
+            <a href="visits.html">View visits</a>
+        </nav>
+        <a href="register.html" class="btn">Register Pet</a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+    <!-- contact -->
+
+    <section class="profile" id="profile">
+
+
+        <h1 class="heading">Pet's Profile <span id="status-label">(Archived)</span></h1>
+
+        <form>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" class="box" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" min="1" max="30" step="1" class="box" required>
+
+            <label for="sex">Sex</label>
+            <select name="sex" id="sex" class="box">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="species">Species</label>
+            <input type="text" id="species" class="box" required>
+
+            <label for="weight">Weight</label>
+            <input type="number" step="1" min="1" max="100" id="weight" class="box" required>
+
+            <label for="body_temperature">Body temperature</label>
+            <input type="number" , step=".01" id="body_temperature" class="box" required>
+
+            <button type="button" id="edit-profile" class="btn">Edit</button>
+            <button type="button" id="edit-status" class="btn">Archive</button>
+
+        </form>
+
+        <div class="alert alert-success success" role="alert">
+            Pet profile edited successfully
+        </div>
+
+        <div class="alert alert-danger error" role="alert">
+            Something went wrong
+        </div>
+
+        <div class="pet-visits">
+            <h3>Case history</h3>
+            <table class="table table-striped visits-table" id="pet-visits-table">
+                <thead>
+                <tr>
+                    <th scope="col">DATE</th>
+                    <th scope="col">TYPE OF VISIT</th>
+                    <th scope="col">RESULTS</th>
+                </tr>
+                </thead>
+                <tbody class="pet-visits-table-body">
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <script src="js/requestsHandler.js"></script>
+    <script src="js/PageHandler/profilePageHandler.js"></script>
+</body>
+
+</html>

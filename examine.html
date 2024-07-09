@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Add a visit - Vet system</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="title_div">
+            <img src="./images/lo.jpeg" href="#" class="logo">
+            <h3 class="log">Vet System</h3>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register a pet</a>
+            <a href="examine.html">Add a visit</a>
+            <a href="visits.html">View visits</a>
+        </nav>
+        <a href="register.html" class="btn">Register Pet</a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <section class="examine" id="examine">
+
+        <h1 class="heading">Examination</h1>
+
+        <form>
+
+            <div>
+                <span>Choose pet (owner | pet)</span>
+                <select name="pet_id" id="pet_id" class="box">
+                    
+                </select>
+            </div>
+            <div>
+                <span>Date</span>
+                <input type="date" id="date" class="box" required>
+            </div>
+            <div>
+                <span>Type of visit</span>
+                <select name="type" id="type" class="box">
+                    <option value="Regular">Regular</option>
+                    <option value="Check-up">Check-up</option>
+                </select>
+            </div>
+            <span>Examination results</span>
+            <div>
+                <textarea maxlength="194" id="description" required></textarea>
+            </div>
+
+            <div>
+                <span>Cost (L.E.)</span>
+                <input type="number" id="cost" step=".01" class="box" required>
+            </div>
+
+            <button class="btn" id="add-visit" type="button">Save</button>
+
+        </form>
+
+        
+        <div class="alert alert-success success" role="alert">
+            Visit added successfully
+        </div>
+
+        <div class="alert alert-danger error" role="alert">
+            Something went wrong
+        </div>
+
+    </section>
+
+    <script src="js/requestsHandler.js"></script>
+    <script src="js/PageHandler/examinePageHandler.js"></script>
+</body>
+</html>
